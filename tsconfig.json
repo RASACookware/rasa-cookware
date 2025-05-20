@@ -18,11 +18,11 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./*"]
     },
     "types": [
-        "./cloudflare-env.d.ts",
         "node"
     ]
   },
