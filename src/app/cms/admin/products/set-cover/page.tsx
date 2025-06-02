@@ -24,9 +24,7 @@ export default function ChangeCoverImagePage() {
 
         const fetchImages = async () => {
             try {
-                const res = await fetch(
-                    `/api/admin/products/get?id=${productId}`
-                );
+                const res = await fetch(`/api/products/get?id=${productId}`);
                 const data = await res.json();
 
                 if (data?.product?.images?.length) {

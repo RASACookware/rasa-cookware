@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 export type ProductLine = "castIronCookware" | "triplyCookware";
 
 export interface IProduct {
-    _id?: string; // optional for new inserts
+    _id: string; // optional for new inserts
     title: string;
     description: string;
     price: number;

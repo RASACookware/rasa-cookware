@@ -1,6 +1,29 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Toaster } from "sonner";
+import { Aboreto, Cormorant_Garamond, Inter } from "next/font/google";
+import ClientLayoutWrapper from "../components/client-layout-wrapper";
+import { ViewTransitions } from "next-view-transitions";
+
+const cormorant = Cormorant_Garamond({
+    subsets: ["latin"],
+    weight: ["400", "500", "700"], // Adjust as needed
+    display: "swap",
+    variable: "--font-cormorant",
+});
+
+const aboreto = Aboreto({
+    subsets: ["latin"],
+    weight: "400", // Aboreto has only one weight
+    display: "swap",
+    variable: "--font-aboreto",
+});
+
+const inter = Inter({
+    subsets: ["latin"],
+    weight: ["400", "500", "700"], // Adjust as needed
+    display: "swap",
+    variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
     title: "Rasa Cookware",
@@ -13,10 +36,19 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body className={`antialiased`}>
-                <Toaster position="top-right" richColors theme="light" />
-                {children}
+        <html
+            lang="en"
+            className={`${cormorant.variable} ${aboreto.variable} ${inter.variable}`}
+        >
+            <body>
+                <ViewTransitions>
+                    <div
+                        id="view-transition-root"
+                        style={{ viewTransitionName: "page" }}
+                    >
+                        <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
+                    </div>
+                </ViewTransitions>
             </body>
         </html>
     );

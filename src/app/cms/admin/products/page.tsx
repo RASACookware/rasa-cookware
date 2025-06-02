@@ -158,12 +158,12 @@ export default function ProductsPage() {
                     </div>
 
                     {/* Filters */}
-                    <div className="bg-gray-50 border border-gray-200 max-w-lg rounded-lg p-6 mb-8 shadow-sm">
+                    <div className="bg-gray-50 border border-gray-200 max-w-md rounded-lg p-6 mb-8 shadow-sm">
                         <div className="flex flex-wrap gap-6 items-end">
                             <div className="flex-1 min-w-[200px]">
                                 <label
                                     htmlFor="category-select"
-                                    className="block text-sm font-medium text-gray-700 mb-2"
+                                    className="block text-base font-medium text-gray-700 mb-2"
                                 >
                                     Category
                                 </label>

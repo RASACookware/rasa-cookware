@@ -65,6 +65,10 @@ export default function ProductCreateForm() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
+        if (images.length === 0) {
+            return;
+        }
+
         setSubmitting(true);
 
         const productData = {
@@ -234,7 +238,7 @@ export default function ProductCreateForm() {
         },
         {
             id: "itemDimensions",
-            label: "Item Dimensions (LxWxH)",
+            label: "Item Dimensions (LxWxH in cm)",
             value: itemDimensions,
             setter: setItemDimensions,
             placeholder: "e.g., 10x8x4",
@@ -472,7 +476,6 @@ export default function ProductCreateForm() {
                     signatureEndpoint={"/api/admin/sign-cloudinary-params"}
                     onSuccess={(result, { widget }) => {
                         const info = result.info as CloudinaryUploadWidgetInfo;
-                        console.log("Upload result:", info.url);
 
                         if (info && typeof info === "object" && "url" in info) {
                             const uploadedUrl = info.url as string;
