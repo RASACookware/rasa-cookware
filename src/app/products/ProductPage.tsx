@@ -400,38 +400,3 @@ function DetailItem({ label, value }: { label: string; value: string }) {
         </div>
     );
 }
-
-function ErrorDisplay({ message }: { message: string }) {
-    return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-            <div className="text-center p-8 max-w-md">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-50 mb-6">
-                    <svg
-                        className="w-8 h-8 text-red-500"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M6 18L18 6M6 6l12 12"
-                        />
-                    </svg>
-                </div>
-                <h2 className="text-2xl font-cormorant font-semibold text-gray-900 mb-3">
-                    Something went wrong
-                </h2>
-                <p className="text-gray-600 mb-8 leading-relaxed">{message}</p>
-                <Button
-                    onClick={() => (window.location.href = "/products")}
-                    className="rounded-xl bg-gray-900 hover:bg-gray-800 text-white px-6 py-3"
-                >
-                    Return to Products
-                </Button>
-            </div>
-        </div>
-    );
-}
