@@ -228,8 +228,8 @@ export default function Navbar() {
                                         onMouseEnter={() =>
                                             setOpenSubmenu(name)
                                         }
-                                        className="flex items-center gap-1 transition-colors hover:text-gray-600"
-                                        whileHover={{ scale: 1.05 }}
+                                        className="flex items-center gap-1 transition-colors"
+                                        whileHover={{ scale: 1.02 }}
                                         transition={{ duration: 0.2 }}
                                     >
                                         {name}
@@ -285,7 +285,7 @@ export default function Navbar() {
                                                                     href={
                                                                         subHref
                                                                     }
-                                                                    className="block px-4 py-2 text-gray-700 hover:text-gray-900 transition-colors"
+                                                                    className="block px-4 py-2 text-gray-700 transition-colors"
                                                                     onClick={(
                                                                         e
                                                                     ) =>
@@ -307,13 +307,15 @@ export default function Navbar() {
                                 </>
                             ) : (
                                 <motion.div
-                                    whileHover={{ scale: 1.05 }}
+                                    // whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.2 }}
                                 >
                                     <Link
                                         href={href}
-                                        className={`transition-colors hover:text-gray-600 ${
-                                            pathname === href ? "underline" : ""
+                                        className={`transition-colors hover:underline ${
+                                            pathname === href
+                                                ? "underline pb-2"
+                                                : ""
                                         }`}
                                         onClick={(e) => handleNavClick(e, href)}
                                     >

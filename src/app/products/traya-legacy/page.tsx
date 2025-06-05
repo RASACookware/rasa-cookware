@@ -8,22 +8,6 @@ import { ProductSkeleton } from "@/src/components/product-skeleton";
 import { ProductCard } from "@/src/components/product-card";
 import { toast } from "sonner";
 
-// const metadata = {
-//     title: "Traya Legacy | Rasa Cookware",
-//     description:
-//         "Explore our collection of triply cookware featuring the Traya Legacy line, including frypans, kadais, and saucepans. Experience the perfect blend of performance and elegance in your kitchen.",
-//     keywords: [
-//         "triply cookware",
-//         "Traya Legacy",
-//         "frypans",
-//         "kadais",
-//         "saucepans",
-//         "cookware",
-//         "kitchen essentials",
-//         "premium cookware",
-//     ],
-// };
-
 export default function Page() {
     const [products, setProducts] = useState<IProduct[]>([]);
     const [loading, setLoading] = useState(true);
