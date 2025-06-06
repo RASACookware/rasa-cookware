@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import React, { useRef } from "react";
@@ -19,27 +20,28 @@ export default function TextLift({
     animateOnScroll = true,
     delay = 0,
 }: TextLiftProps) {
-    // Use HTMLDivElement to match div ref
     const containerRef = useRef<HTMLDivElement | null>(null);
-
-    // Arrays of elements and SplitText instances
-    const elementRef = useRef<HTMLElement[]>([]);
     const splitRef = useRef<SplitText[]>([]);
-    const lines = useRef<HTMLElement[]>([]);
 
     useGSAP(
         () => {
             if (!containerRef.current) return;
 
-            // Reset arrays
-            elementRef.current = [];
+            // Immediately hide the container to prevent flash
+            gsap.set(containerRef.current, { autoAlpha: 0 });
+
+            // Clear previous splits
+            splitRef.current.forEach((split) => {
+                if (split) {
+                    split.revert();
+                }
+            });
             splitRef.current = [];
-            lines.current = [];
 
             let elements: HTMLElement[] = [];
 
+            // Check if we have a wrapper with multiple children
             if (containerRef.current.hasAttribute("data-text-lift-wrapper")) {
-                // Cast children to HTMLElement[]
                 elements = Array.from(
                     containerRef.current.children
                 ) as HTMLElement[];
@@ -47,56 +49,54 @@ export default function TextLift({
                 elements = [containerRef.current];
             }
 
-            elements.forEach((element) => {
-                elementRef.current.push(element);
+            const allLines: HTMLElement[] = [];
 
-                // Create SplitText instance
+            elements.forEach((element) => {
+                if (!element.textContent?.trim()) return;
+
                 const split = new SplitText(element, {
                     type: "lines",
-                    linesClass: "line++",
-                    mask: "lines",
+                    linesClass: "split-line",
                 });
 
                 splitRef.current.push(split);
+                gsap.set(element, { overflow: "hidden" });
 
-                const computedStyle = window.getComputedStyle(element);
-                const textIndent = computedStyle.textIndent;
-
-                if (textIndent && textIndent === "0px") {
-                    if (split.lines.length > 0) {
-                        // split.lines is HTMLElement[]
-                        (split.lines[0] as HTMLElement).style.paddingLeft =
-                            textIndent;
-                    }
-                    (element as HTMLElement).style.textIndent = "0";
+                if (split.lines && split.lines.length > 0) {
+                    allLines.push(...(split.lines as HTMLElement[]));
                 }
-
-                // Collect all lines (HTMLElement[])
-                lines.current.push(...(split.lines as HTMLElement[]));
             });
 
-            // Set initial position
-            gsap.set(lines.current, { y: "100%" });
+            if (allLines.length === 0) return;
+
+            // Now reveal the container after splitting
+            gsap.set(containerRef.current, { autoAlpha: 1 });
+
+            gsap.set(allLines, {
+                y: "100%",
+                opacity: 1,
+            });
 
             const animationProps = {
                 y: "0%",
-                duration: 1,
-                stagger: 0.1,
-                ease: "power4.out",
+                duration: 1.2,
+                stagger: 0.08,
+                ease: "power3.out",
                 delay: delay,
             };
 
             if (animateOnScroll) {
-                gsap.to(lines.current, {
+                gsap.to(allLines, {
                     ...animationProps,
                     scrollTrigger: {
                         trigger: containerRef.current,
-                        start: "top 75%",
+                        start: "top 80%",
+                        end: "bottom 20%",
                         once: true,
                     },
                 });
             } else {
-                gsap.to(lines.current, animationProps);
+                gsap.to(allLines, animationProps);
             }
 
             return () => {
@@ -105,24 +105,38 @@ export default function TextLift({
                         split.revert();
                     }
                 });
+                ScrollTrigger.getAll().forEach((trigger) => {
+                    if (trigger.trigger === containerRef.current) {
+                        trigger.kill();
+                    }
+                });
             };
         },
         {
             scope: containerRef,
-            dependencies: [animateOnScroll, delay],
+            dependencies: [],
         }
     );
 
-    // // If single child, clone it and attach ref
-    // if (React.Children.count(children) === 1) {
-    //     const child = React.Children.only(children);
-    //     if (React.isValidElement(child)) {
-    //         return React.cloneElement(child, { ref: containerRef });
-    //     }
-    // }
-    // Multiple children: wrap in div with ref and data attribute
+    if (React.Children.count(children) === 1) {
+        const child = React.Children.only(children);
+        if (React.isValidElement(child) && typeof child.type === "string") {
+            return React.cloneElement(child as React.ReactElement<any>, {
+                ref: containerRef,
+                style: {
+                    ...((child.props as any)?.style || {}),
+                    overflow: "hidden",
+                },
+            });
+        }
+    }
+
     return (
-        <div ref={containerRef} data-text-lift-wrapper="true">
+        <div
+            ref={containerRef}
+            data-text-lift-wrapper="true"
+            style={{ overflow: "hidden" }}
+        >
             {children}
         </div>
     );

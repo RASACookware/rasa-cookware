@@ -236,38 +236,6 @@ export default function TriplyCookwareCare() {
                 </div>
             </section>
 
-            {/* Visual Divider
-            <section className="relative h-[500px] overflow-hidden">
-                <div className="absolute inset-0">
-                    <Image
-                        src="https://images.unsplash.com/photo-1462475279937-40cb2b162a99?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="Cookware Care"
-                        fill
-                        className="object-cover brightness-[0.6]"
-                    />
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true, margin: "-100px" }}
-                        className="bg-black/60 backdrop-blur-sm p-8 md:p-12 rounded-3xl max-w-4xl mx-4"
-                    >
-                        <h2 className="text-3xl md:text-5xl font-aboreto text-white text-center mb-6">
-                            The Art of Cookware Care
-                        </h2>
-                        <p className="font-cormorant text-lg md:text-xl text-zinc-200 text-center leading-relaxed">
-                            Proper care doesn't just extend the life of your
-                            cookware—it enhances your cooking experience. When
-                            you maintain your Traya Legacy pieces with
-                            intention, they reward you with consistent
-                            performance and timeless beauty.
-                        </p>
-                    </motion.div>
-                </div>
-            </section> */}
-
             {/* Care Tips Gallery */}
             <section className="pt-15 pb-20 px-4 sm:px-6 lg:px-8 grainy">
                 <div className="max-w-6xl mx-auto">

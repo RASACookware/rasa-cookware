@@ -8,16 +8,7 @@ import { Button } from "@/src/components/ui/button";
 import { Label } from "@/src/components/ui/label";
 import { toast } from "sonner";
 import { sendEmail } from "../actions/send-email";
-import {
-    MapPin,
-    Phone,
-    Mail,
-    Clock,
-    Facebook,
-    Twitter,
-    Instagram,
-    Linkedin,
-} from "lucide-react";
+import { MapPin, Mail, Clock } from "lucide-react";
 import Image from "next/image";
 
 export default function ContactPage() {
@@ -99,33 +90,22 @@ export default function ContactPage() {
         {
             icon: MapPin,
             title: "Address",
-            details: ["123 Cookware Street", "Culinary District, CD 12345"],
-        },
-        {
-            icon: Phone,
-            title: "Phone",
-            details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
+            details: [
+                "Domineer Mettech Company",
+                "Ganga Industrial Area",
+                "Rajkot, Gujarat, India",
+            ],
         },
         {
             icon: Mail,
             title: "Email",
-            details: ["hello@rasacookware.com", "support@rasacookware.com"],
+            details: ["care@rasacookware.com"],
         },
         {
             icon: Clock,
             title: "Business Hours",
-            details: [
-                "Mon - Fri: 9:00 AM - 6:00 PM",
-                "Sat - Sun: 10:00 AM - 4:00 PM",
-            ],
+            details: ["Mon - Sat: 9:00 AM - 6:00 PM"],
         },
-    ];
-
-    const socialLinks = [
-        { icon: Facebook, href: "#", label: "Facebook" },
-        { icon: Twitter, href: "#", label: "Twitter" },
-        { icon: Instagram, href: "#", label: "Instagram" },
-        { icon: Linkedin, href: "#", label: "LinkedIn" },
     ];
 
     return (
@@ -344,30 +324,6 @@ export default function ContactPage() {
                         ))}
                     </div>
 
-                    {/* Social Media */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 1.0 }}
-                        className="bg-white rounded-xl shadow-md p-6 border border-gray-200"
-                    >
-                        <h3 className="font-semibold text-gray-900 mb-4">
-                            Follow Us
-                        </h3>
-                        <div className="flex space-x-4">
-                            {socialLinks.map((social) => (
-                                <a
-                                    key={social.label}
-                                    href={social.href}
-                                    className="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors duration-200"
-                                    aria-label={social.label}
-                                >
-                                    <social.icon className="w-5 h-5 text-white" />
-                                </a>
-                            ))}
-                        </div>
-                    </motion.div>
-
                     {/* Map Placeholder */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -375,15 +331,14 @@ export default function ContactPage() {
                         transition={{ duration: 0.6, delay: 1.2 }}
                         className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200"
                     >
-                        <div className="h-64 flex items-center justify-center text-gray-900 text-center p-6">
-                            <MapPin className="w-12 h-12 mb-2" />
-                            <div>
-                                <p className="text-lg font-semibold">
-                                    Interactive Map
-                                </p>
-                                <p className="text-sm">Coming Soon</p>
-                            </div>
-                        </div>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4527.893022806989!2d70.85120855243774!3d22.146799098404973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39584bdf50335d59%3A0xe699071007cae288!2sDomineer%20Mettech%20Company!5e1!3m2!1sen!2sus!4v1749200390519!5m2!1sen!2sus"
+                            width="100%"
+                            height="256"
+                            style={{ border: 0 }}
+                            allowFullScreen
+                            loading="lazy"
+                        ></iframe>
                     </motion.div>
                 </motion.div>
             </section>

@@ -10,6 +10,7 @@ import { InteractiveHoverButton } from "@/src/components/magicui/interactive-hov
 import AnimatedUnderlineButton from "@/src/components/ui/animated-underline-button";
 import { ProductCard } from "@/src/components/product-card";
 import { ProductSkeleton } from "@/src/components/product-skeleton";
+import TextLift from "@/src/components/text-lift";
 
 export default function ProductsPage() {
     const [products, setProducts] = useState<IProduct[]>([]);
@@ -71,7 +72,22 @@ export default function ProductsPage() {
                     />
                     <div className="absolute inset-0 "></div>
                 </div>
-                <motion.div
+                <div className="relative z-10 text-center items-center justify-center px-6">
+                    <TextLift delay={0.1}>
+                        <h1 className="text-4xl md:text-6xl font-aboreto text-white drop-shadow-sm">
+                            Our Products
+                        </h1>
+                    </TextLift>
+                    <TextLift delay={0.4}>
+                        <p className="text-lg md:text-xl max-w-2xl mx-auto mt-4 font-cormorant text-zinc-200 drop-shadow-sm">
+                            Discover our premium collection of cookware, crafted
+                            with precision and designed for culinary excellence.
+                            From traditional cast iron to modern triply
+                            technology.
+                        </p>
+                    </TextLift>
+                </div>
+                {/* <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
@@ -90,8 +106,9 @@ export default function ProductsPage() {
                         with precision and designed for culinary excellence.
                         From traditional cast iron to modern triply technology.
                     </motion.p>
-                </motion.div>
+                </motion.div> */}
             </section>
+
             {/* Cast Iron Classics Section */}
             <section className="py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">

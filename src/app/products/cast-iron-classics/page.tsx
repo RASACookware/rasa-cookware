@@ -8,12 +8,6 @@ import { ProductSkeleton } from "@/src/components/product-skeleton";
 import { ProductCard } from "@/src/components/product-card";
 import { toast } from "sonner";
 
-// const metadata = {
-//     title: "Cast Iron Classics",
-//     description: "Explore our collection of cast iron cookware.",
-//     keywords: ["cast iron", "cookware", "kitchen essentials"],
-// };
-
 export default function Page() {
     const [products, setProducts] = useState<IProduct[]>([]);
     const [loading, setLoading] = useState(true);

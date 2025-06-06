@@ -319,7 +319,12 @@ export default function ProductPageClient({ product }: { product: IProduct }) {
                                             <p className="text-sm text-gray-600 italic antialiased">
                                                 For detailed care instructions,{" "}
                                                 <Link
-                                                    href="/care/cast-iron"
+                                                    href={
+                                                        product.productLine ===
+                                                        "castIronCookware"
+                                                            ? "/care/cast-iron"
+                                                            : "/care/triply"
+                                                    }
                                                     target="_blank"
                                                     className="text-gray-900 underline hover:no-underline transition-all"
                                                 >
