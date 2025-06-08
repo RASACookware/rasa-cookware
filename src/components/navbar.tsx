@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import type React from "react";
 import { useState, useRef, useEffect } from "react";
@@ -23,16 +24,16 @@ const navLinks = [
             { name: "Traya Legacy", href: "/products/traya-legacy" },
         ],
     },
-    { name: "About Us", href: "/about-us" },
-    { name: "Contact", href: "/contact" },
     {
-        name: "Care",
+        name: "Product Care",
         href: "/care",
         submenu: [
             { name: "Cast Iron Care", href: "/care/cast-iron" },
             { name: "Triply Care", href: "/care/triply" },
         ],
     },
+    { name: "About Us", href: "/about-us" },
+    { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -202,14 +203,13 @@ export default function Navbar() {
                     onClick={(e) => handleNavClick(e, "/")}
                     className="flex items-center space-x-3 relative z-20"
                 >
-                    <Image
+                    <img
                         src="/rasa-cookware-logo.png"
                         alt="Rasa Cookware Logo"
                         className={`h-10 w-auto ${
                             isHomePage && !scrolled ? "invert" : ""
                         }`}
-                        width={40}
-                        height={40}
+                        loading="lazy"
                     />
                 </Link>
 
@@ -377,7 +377,7 @@ export default function Navbar() {
                         animate="visible"
                         exit="exit"
                         variants={mobileMenuVariants}
-                        className="fixed top-0 right-0 bottom-0 w-72 bg-white shadow-xl z-[60] p-6 overflow-y-auto"
+                        className="fixed top-0 right-0 bottom-0 w-72 bg-white shadow-xl z-[60] h-screen p-6 overflow-y-auto"
                         ref={mobileMenuRef}
                     >
                         <motion.div

@@ -31,6 +31,7 @@ import {
     Trash2,
     ExternalLink,
     MoreHorizontal,
+    SquarePen,
 } from "lucide-react";
 import {
     DropdownMenu,
@@ -345,6 +346,18 @@ export default function ProductsPage() {
                                                             Actions
                                                         </DropdownMenuLabel>
                                                         <DropdownMenuSeparator />
+                                                        <DropdownMenuItem className="hover:bg-gray-100 focus:bg-gray-100">
+                                                            <Link
+                                                                href={
+                                                                    "products/edit/" +
+                                                                    product._id
+                                                                }
+                                                                className="flex items-center gap-2 w-full"
+                                                            >
+                                                                <SquarePen className="w-4 h-4 text-gray-600" />
+                                                                Edit Product
+                                                            </Link>
+                                                        </DropdownMenuItem>
                                                         <DropdownMenuItem className="hover:bg-gray-100 focus:bg-gray-100">
                                                             <Link
                                                                 href={

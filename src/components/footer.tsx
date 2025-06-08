@@ -1,4 +1,4 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 
 export default function Footer() {
@@ -9,16 +9,15 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Logo and description */}
                 <div className="flex flex-col items-start">
-                    <Image
+                    <img
                         src="/rasa-cookware-logo.png"
                         alt="Rasa Cookware Logo"
                         className="h-12 mb-4 invert"
-                        width={48}
-                        height={48}
                     />
                     <p className="max-w-xs text-zinc-400">
-                        Rasa Cookware is dedicated to crafting premium, durable
-                        cookware that inspires culinary creativity.
+                        {/* Rasa Cookware is dedicated to crafting premium, durable
+                        cookware that inspires culinary creativity. */}
+                        Elevating your culinary experience.
                     </p>
                 </div>
 
@@ -34,14 +33,6 @@ export default function Footer() {
                                 className="hover:text-white transition"
                             >
                                 Home
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/about-us"
-                                className="hover:text-white transition"
-                            >
-                                About Us
                             </Link>
                         </li>
                         <li>
@@ -86,6 +77,14 @@ export default function Footer() {
                         </li>
                         <li>
                             <Link
+                                href="/about-us"
+                                className="hover:text-white transition"
+                            >
+                                About Us
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
                                 href="/contact"
                                 className="hover:text-white transition"
                             >
@@ -101,13 +100,11 @@ export default function Footer() {
                         Contact
                     </h3>
                     <p className="text-sm text-zinc-400 mb-2">
-                        Email: support@rasacookware.com
-                    </p>
-                    <p className="text-sm text-zinc-400 mb-2">
-                        Phone: +1 123-456-7890
+                        Email: care@rasacookware.com
                     </p>
                     <p className="text-sm text-zinc-400">
-                        Address: 123 Cookware St, Culinary District, India
+                        Domineer Mettech Company, Ganga Industrial Area,
+                        <br /> Rajkot, Gujarat, India
                     </p>
                 </div>
             </div>

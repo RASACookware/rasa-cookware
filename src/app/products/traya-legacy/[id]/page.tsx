@@ -17,6 +17,7 @@ export async function generateMetadata({
     const res = await fetch(`${BASE_URL}/api/products/get?id=${id}`, {
         cache: "no-store",
     });
+
     if (!res.ok) notFound();
 
     const data = await res.json();

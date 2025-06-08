@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import React, { useRef } from "react";
@@ -27,10 +26,8 @@ export default function TextLift({
         () => {
             if (!containerRef.current) return;
 
-            // Immediately hide the container to prevent flash
             gsap.set(containerRef.current, { autoAlpha: 0 });
 
-            // Clear previous splits
             splitRef.current.forEach((split) => {
                 if (split) {
                     split.revert();
@@ -38,17 +35,7 @@ export default function TextLift({
             });
             splitRef.current = [];
 
-            let elements: HTMLElement[] = [];
-
-            // Check if we have a wrapper with multiple children
-            if (containerRef.current.hasAttribute("data-text-lift-wrapper")) {
-                elements = Array.from(
-                    containerRef.current.children
-                ) as HTMLElement[];
-            } else {
-                elements = [containerRef.current];
-            }
-
+            const elements = [containerRef.current];
             const allLines: HTMLElement[] = [];
 
             elements.forEach((element) => {
@@ -69,7 +56,6 @@ export default function TextLift({
 
             if (allLines.length === 0) return;
 
-            // Now reveal the container after splitting
             gsap.set(containerRef.current, { autoAlpha: 1 });
 
             gsap.set(allLines, {
@@ -118,19 +104,7 @@ export default function TextLift({
         }
     );
 
-    if (React.Children.count(children) === 1) {
-        const child = React.Children.only(children);
-        if (React.isValidElement(child) && typeof child.type === "string") {
-            return React.cloneElement(child as React.ReactElement<any>, {
-                ref: containerRef,
-                style: {
-                    ...((child.props as any)?.style || {}),
-                    overflow: "hidden",
-                },
-            });
-        }
-    }
-
+    // Always wrap children in a div with ref
     return (
         <div
             ref={containerRef}
