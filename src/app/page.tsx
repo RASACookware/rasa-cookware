@@ -268,7 +268,7 @@ export default function Home() {
             {/* Reviews Section */}
             <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white relative">
                 <TextLift animateOnScroll>
-                    <h2 className="text-3xl md:text-4xl font-aboreto text-center text-gray-900 mb-12">
+                    <h2 className="text-2xl md:text-4xl font-aboreto text-center text-gray-900 mb-12">
                         Our Happy Customers
                     </h2>
                 </TextLift>
