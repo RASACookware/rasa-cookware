@@ -240,9 +240,7 @@ export default function CastIronCare() {
                                         }
                                         className="text-left text-xl font-aboreto text-gray-900 px-6 py-5 hover:bg-amber-50 focus:bg-amber-100 first:rounded-t-2xl cursor-pointer select-none outline-none focus-visible:ring-2 focus-visible:ring-amber-400 border-none"
                                     >
-                                        <TextLift animateOnScroll delay={0.2}>
-                                            {i + 1}. {title}
-                                        </TextLift>
+                                        {i + 1}. {title}
                                     </AccordionTrigger>
                                     <AccordionContent className="px-6 pt-4 font-cormorant text-lg text-zinc-700 leading-relaxed bg-amber-50 rounded-b-2xl">
                                         {content}

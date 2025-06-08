@@ -209,9 +209,7 @@ export default function TriplyCookwareCare() {
                     hover:bg-amber-50 focus:bg-amber-100 first:rounded-t-2xl cursor-pointer 
                     select-none outline-none focus-visible:ring-2 focus-visible:ring-amber-400 border-none"
                                     >
-                                        <TextLift animateOnScroll delay={0.2}>
-                                            {title}
-                                        </TextLift>
+                                        {title}
                                     </AccordionTrigger>
                                     <AccordionContent
                                         className="px-6 pt-4 font-cormorant text-lg text-zinc-700 leading-relaxed 
