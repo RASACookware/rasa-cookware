@@ -125,34 +125,32 @@ export default function Page() {
                     {/* Overlay on large, separate content below on small */}
                     <div className="md:absolute md:inset-0 md:flex md:items-center md:justify-start md:px-40 relative z-10 bg-[#101010] md:bg-transparent px-6 py-10">
                         <div className="max-w-lg sm:text-left text-center text-zinc-200">
-                            <TextLift animateOnScroll delay={0.2}>
-                                <h1 className="text-4xl md:text-2xl tracking-wide font-aboreto drop-shadow-sm">
-                                    Traya Frypan
-                                </h1>
-                            </TextLift>
+                            {/* <TextLift animateOnScroll delay={0.2}> */}
+                            <h1 className="text-4xl md:text-2xl tracking-wide font-aboreto drop-shadow-sm">
+                                Traya Frypan
+                            </h1>
+                            {/* </TextLift> */}
 
-                            <TextLift animateOnScroll delay={0.4}>
-                                <h3 className="text-xl md:text-lg font-cormorant italic drop-shadow-sm">
-                                    Effortless Sear. Seamless Elegance.
-                                </h3>
-                            </TextLift>
-                            <TextLift animateOnScroll delay={0.6}>
-                                <p className="md:text-lg mt-4 font-cormorant drop-shadow-sm">
-                                    The Traya Frypan is a study in
-                                    balance—between responsiveness and
-                                    restraint, performance and beauty. Crafted
-                                    with three bonded layers of stainless steel
-                                    and an aluminum core, it delivers impeccable
-                                    heat distribution from edge to edge. Whether
-                                    you&apos;re searing scallops, caramelizing
-                                    onions, or flipping delicate omelets, every
-                                    movement is smooth, every finish immaculate.
-                                    With an ergonomic handle designed for
-                                    comfort and control, this frypan transforms
-                                    everyday cooking into a quiet act of
-                                    precision.
-                                </p>
-                            </TextLift>
+                            {/* <TextLift animateOnScroll delay={0.4}> */}
+                            <h3 className="text-xl md:text-lg font-cormorant italic drop-shadow-sm">
+                                Effortless Sear. Seamless Elegance.
+                            </h3>
+                            {/* </TextLift> */}
+                            {/* <TextLift animateOnScroll delay={0.6}> */}
+                            <p className="md:text-lg mt-4 font-cormorant drop-shadow-sm">
+                                The Traya Frypan is a study in balance—between
+                                responsiveness and restraint, performance and
+                                beauty. Crafted with three bonded layers of
+                                stainless steel and an aluminum core, it
+                                delivers impeccable heat distribution from edge
+                                to edge. Whether you&apos;re searing scallops,
+                                caramelizing onions, or flipping delicate
+                                omelets, every movement is smooth, every finish
+                                immaculate. With an ergonomic handle designed
+                                for comfort and control, this frypan transforms
+                                everyday cooking into a quiet act of precision.
+                            </p>
+                            {/* </TextLift> */}
                         </div>
                     </div>
                 </div>
@@ -173,30 +171,30 @@ export default function Page() {
                     {/* Overlay on large, separate content below on small */}
                     <div className="md:absolute md:inset-0 md:flex md:items-center md:justify-end md:px-40 relative z-10 bg-[#101010] md:bg-transparent px-6 py-10">
                         <div className="max-w-lg sm:text-left text-center text-zinc-200">
-                            <TextLift animateOnScroll delay={0.2}>
-                                <h1 className="text-4xl md:text-2xl tracking-wide font-aboreto drop-shadow-sm">
-                                    Traya Kadai with Lid
-                                </h1>
-                            </TextLift>
-                            <TextLift animateOnScroll delay={0.4}>
-                                <h3 className="text-xl md:text-lg font-cormorant italic drop-shadow-sm">
-                                    Rooted in Design. Elevated in Performance.
-                                </h3>
-                            </TextLift>
-                            <TextLift animateOnScroll delay={0.6}>
-                                <p className="md:text-lg mt-4 font-cormorant drop-shadow-sm">
-                                    A modern reimagination of the Indian kadai,
-                                    the Traya triply version balances generous
-                                    depth with outstanding control. Designed to
-                                    tackle high-heat stir-fries, deep fries, and
-                                    rich curries, it holds heat like cast
-                                    iron—but with the agility and lightness of
-                                    steel. The ergonomic handles and domed
-                                    stainless lid make it versatile from
-                                    stovetop to serveware. It&apos;s where
-                                    performance meets poise, dish after dish.
-                                </p>
-                            </TextLift>
+                            {/* <TextLift animateOnScroll delay={0.2}> */}
+                            <h1 className="text-4xl md:text-2xl tracking-wide font-aboreto drop-shadow-sm">
+                                Traya Kadai with Lid
+                            </h1>
+                            {/* </TextLift> */}
+                            {/* <TextLift animateOnScroll delay={0.4}> */}
+                            <h3 className="text-xl md:text-lg font-cormorant italic drop-shadow-sm">
+                                Rooted in Design. Elevated in Performance.
+                            </h3>
+                            {/* </TextLift> */}
+                            {/* <TextLift animateOnScroll delay={0.6}> */}
+                            <p className="md:text-lg mt-4 font-cormorant drop-shadow-sm">
+                                A modern reimagination of the Indian kadai, the
+                                Traya triply version balances generous depth
+                                with outstanding control. Designed to tackle
+                                high-heat stir-fries, deep fries, and rich
+                                curries, it holds heat like cast iron—but with
+                                the agility and lightness of steel. The
+                                ergonomic handles and domed stainless lid make
+                                it versatile from stovetop to serveware.
+                                It&apos;s where performance meets poise, dish
+                                after dish.
+                            </p>
+                            {/* </TextLift> */}
                         </div>
                     </div>
                 </div>
@@ -217,33 +215,32 @@ export default function Page() {
                     {/* Overlay on large, separate content below on small */}
                     <div className="md:absolute md:inset-0 md:flex md:items-center md:justify-start md:px-40 relative z-10 bg-[#101010] md:bg-transparent px-6 py-10">
                         <div className="max-w-lg sm:text-left text-center text-zinc-200">
-                            <TextLift animateOnScroll delay={0.2}>
-                                <h1 className="text-4xl md:text-2xl tracking-wide font-aboreto drop-shadow-sm">
-                                    Traya Saucepan
-                                </h1>
-                            </TextLift>
+                            {/* <TextLift animateOnScroll delay={0.2}> */}
+                            <h1 className="text-4xl md:text-2xl tracking-wide font-aboreto drop-shadow-sm">
+                                Traya Saucepan
+                            </h1>
+                            {/* </TextLift> */}
 
-                            <TextLift animateOnScroll delay={0.4}>
-                                <h3 className="text-xl md:text-lg font-cormorant italic drop-shadow-sm">
-                                    Quiet Precision. Everyday Grace.
-                                </h3>
-                            </TextLift>
+                            {/* <TextLift animateOnScroll delay={0.4}> */}
+                            <h3 className="text-xl md:text-lg font-cormorant italic drop-shadow-sm">
+                                Quiet Precision. Everyday Grace.
+                            </h3>
+                            {/* </TextLift> */}
 
-                            <TextLift animateOnScroll delay={0.6}>
-                                <p className="md:text-lg mt-4 font-cormorant drop-shadow-sm">
-                                    Precision-pouring. Gentle simmering.
-                                    Confident control. The Traya Saucepan is
-                                    engineered for the rhythms of everyday
-                                    cooking—from morning chai to evening
-                                    reductions. Its triply construction offers
-                                    unmatched heat stability, eliminating hot
-                                    spots for perfect sauces, grains, and more.
-                                    Thoughtfully weighted and elegantly
-                                    finished, it&apos;s the kind of pan that
-                                    earns its space on your stovetop—and in your
-                                    story.
-                                </p>
-                            </TextLift>
+                            {/* <TextLift animateOnScroll delay={0.6}> */}
+                            <p className="md:text-lg mt-4 font-cormorant drop-shadow-sm">
+                                Precision-pouring. Gentle simmering. Confident
+                                control. The Traya Saucepan is engineered for
+                                the rhythms of everyday cooking—from morning
+                                chai to evening reductions. Its triply
+                                construction offers unmatched heat stability,
+                                eliminating hot spots for perfect sauces,
+                                grains, and more. Thoughtfully weighted and
+                                elegantly finished, it&apos;s the kind of pan
+                                that earns its space on your stovetop—and in
+                                your story.
+                            </p>
+                            {/* </TextLift> */}
                         </div>
                     </div>
                 </div>

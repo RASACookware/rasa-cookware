@@ -17,7 +17,7 @@ export default function Footer() {
                     <p className="max-w-xs text-zinc-400">
                         {/* Rasa Cookware is dedicated to crafting premium, durable
                         cookware that inspires culinary creativity. */}
-                        Elevating your culinary experience.
+                        Elevating Your Culinary Experience.
                     </p>
                 </div>
 

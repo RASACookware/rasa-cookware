@@ -144,9 +144,10 @@ export default function ProductsPage() {
                                       }}
                                   >
                                       <ProductCard product={product} />
-                                      {index === products.length - 1 || (
-                                          <hr className="my-6 mx-auto block md:inline border-black/40 w-40 border-t-2 rounded-full" />
-                                      )}
+                                      {products.length > 1 &&
+                                          index === products.length - 1 && (
+                                              <hr className="my-6 mx-auto block md:inline border-black/40 w-40 border-t-2 rounded-full" />
+                                          )}
                                   </motion.div>
                               ))}
                     </div>
@@ -190,7 +191,7 @@ export default function ProductsPage() {
                         </p>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:mb-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                         {loading
                             ? Array.from({ length: 3 }).map((_, index) => (
                                   <ProductSkeleton key={index} />
@@ -206,9 +207,10 @@ export default function ProductsPage() {
                                       }}
                                   >
                                       <ProductCard product={product} />
-                                      {index === products.length - 1 || (
-                                          <hr className="my-6 mx-auto block md:inline border-black/40 w-40 border-t-2 rounded-full" />
-                                      )}
+                                      {products.length > 1 &&
+                                          index === products.length - 1 && (
+                                              <hr className="my-6 mx-auto block md:inline border-black/40 w-40 border-t-2 rounded-full" />
+                                          )}
                                   </motion.div>
                               ))}
                     </div>
