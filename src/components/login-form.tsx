@@ -63,6 +63,7 @@ export function LoginForm({
                 router.push("/cms/admin/products");
             } catch (err: any) {
                 toast.error("Invalid email or password, please try again.");
+                console.log("Login error:", err);
             }
         });
     };
