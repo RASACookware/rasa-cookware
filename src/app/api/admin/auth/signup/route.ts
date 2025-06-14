@@ -16,12 +16,6 @@ export async function POST(req: Request) {
         await dbConnect();
         const { fullName, email, password } = await req.json();
 
-        console.log("Received data:", {
-            fullName,
-            email,
-            password,
-        });
-
         if (!fullName || !email || !password) {
             return NextResponse.json(
                 { error: "All fields are required." },
@@ -66,7 +60,6 @@ export async function POST(req: Request) {
         });
 
         await newUser.save();
-        console.log("✅ User created successfully:", newUser);
         return NextResponse.json(
             { message: "User created successfully." },
             { status: 201 }

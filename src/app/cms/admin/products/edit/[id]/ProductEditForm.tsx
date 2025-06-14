@@ -185,8 +185,6 @@ export default function ProductEditForm({ productId }: ProductEditFormProps) {
         };
 
         try {
-            console.log("Submitting product data:", productData);
-
             const response = await fetch(
                 `/api/admin/products/edit?id=${productId}`,
                 {

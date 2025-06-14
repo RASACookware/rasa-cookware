@@ -15,7 +15,6 @@ export async function GET(req: Request) {
 
         await dbConnect();
         const admin = await Admin.find();
-        console.log("Admin data:", admin);
 
         if (!admin) {
             return NextResponse.json({

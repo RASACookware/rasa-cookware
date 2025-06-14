@@ -46,7 +46,6 @@ export async function POST(req: NextRequest) {
             );
         }
 
-        console.log("Product deleted:", deleteProduct);
         return NextResponse.json(
             { message: "Product deleted successfully" },
             { status: 200 }

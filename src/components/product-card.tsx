@@ -5,12 +5,10 @@ import Image from "next/image";
 
 export const ProductCard = ({ product }: { product: IProduct }) => {
     const getProductUrl = (product: IProduct) => {
-        console.log("Product URL:", product._id, product.productLine);
         const slug =
             product.productLine === "castIronCookware"
                 ? "cast-iron-classics"
                 : "traya-legacy";
-        console.log("Slug:", slug);
 
         return `/products/${slug}/${product._id}`;
     };

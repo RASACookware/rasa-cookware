@@ -14,7 +14,6 @@ import { getCurrentUser } from "@/lib/jwt";
 
 export default async function AuthButton() {
     const user = await getCurrentUser();
-    console.log("User:", user);
 
     return user ? (
         <div className="flex items-center gap-4">
