@@ -115,14 +115,14 @@ const reviews = [
 const productLineup = [
     {
         name: "Cast Iron Classics",
-        img: "https://images.unsplash.com/photo-1665005499765-45bab6b1dddb?q=80&w=2847&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        img: "https://res.cloudinary.com/dcmjuwoan/image/upload/v1750405343/Rasa-Cookware-Cast-Iron_lqoucz.webp",
         description:
-            "Explore our range of classic cast iron cookware, designed for durability and performance.",
+            "Explore our range of cast iron cookware, designed for durability and performance.",
         link: "/products/cast-iron-classics",
     },
     {
         name: "Traya Legacy",
-        img: "https://images.unsplash.com/photo-1665005499765-45bab6b1dddb?q=80&w=2847&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        img: "https://res.cloudinary.com/dcmjuwoan/image/upload/c_fill,w_4500,h_4500,ar_1:1/v1750405344/Rasa-Cookware-Triply-Legacy_ehxknm.webp",
         description:
             "Discover the Traya Legacy collection, where tradition meets modern design.",
         link: "/products/traya-legacy",
@@ -251,7 +251,8 @@ export default function Home() {
                                     alt={product.name}
                                     width={500}
                                     height={500}
-                                    className="w-full h-64 sm:h-72 md:h-64 lg:h-72 object-cover rounded-lg mb-4"
+                                    unoptimized
+                                    className="w-full h-64 sm:h-64 md:h-64 lg:h-80 object-cover rounded-lg mb-4"
                                 />
                                 <h2 className="text-xl font-semibold font-aboreto text-zinc-800 group-hover:text-zinc-600 transition-colors duration-300 text-center">
                                     {product.name}
