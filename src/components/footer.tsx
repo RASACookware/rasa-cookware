@@ -14,7 +14,7 @@ export default function Footer() {
                         alt="Rasa Cookware Logo"
                         className="h-12 mb-4 invert"
                     />
-                    <p className="max-w-xs text-zinc-400">
+                    <p className="max-w-xs text-zinc-400 font-aboreto">
                         {/* Rasa Cookware is dedicated to crafting premium, durable
                         cookware that inspires culinary creativity. */}
                         Elevating Your Culinary Experience.

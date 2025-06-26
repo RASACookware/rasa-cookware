@@ -7,9 +7,9 @@ export default function AboutUs() {
     return (
         <div className="flex flex-col font-cormorant text-gray-800">
             {/* Hero Section */}
-            <div className="relative w-full sm:h-[720px] h-[700px]">
+            <div className="relative w-full sm:h-[850px] h-[750px]">
                 <Image
-                    src="https://images.unsplash.com/photo-1556909172-8c2f041fca1e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="https://images.unsplash.com/photo-1720414574223-40d393276746?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Rasa Foundry"
                     fill
                     className="object-cover brightness-[0.4]"
