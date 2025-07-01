@@ -46,7 +46,7 @@ export default function Page() {
             <section className="relative sm:h-[850px] h-[700px] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="https://images.unsplash.com/photo-1695089027292-da235d9d4c01?q=80&w=3424&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        src="https://images.unsplash.com/photo-1527667455007-10a82aed3892?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt="Cast Iron Cookware Background"
                         fill
                         className="object-bottom object-cover brightness-[0.4]"

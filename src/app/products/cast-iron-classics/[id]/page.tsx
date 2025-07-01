@@ -79,6 +79,7 @@ export default async function ProductPage({
 
     const data = await res.json();
     const product = data.product;
+
     if (!product) notFound();
 
     return <ProductPageClient product={product} />;
